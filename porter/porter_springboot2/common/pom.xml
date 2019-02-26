@@ -14,9 +14,10 @@
 
   <dependencies>
     <dependency>
-      <artifactId>spring-boot2-starter</artifactId>
       <groupId>org.apache.servicecomb</groupId>
+      <artifactId>spring-boot2-starter</artifactId>
       <version>1.1.0</version>
     </dependency>
   </dependencies>
+
 </project>

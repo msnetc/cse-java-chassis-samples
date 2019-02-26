@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>com.huawei.cse.porter</groupId>
+        <artifactId>porter-application</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.huawei.cse.porter</groupId>
+    <version>1.1.0</version>
+
+    <artifactId>java-chassis-dependencies-springboot2</artifactId>
+
+    <name>Java Chassis::Dependencies::SpringBoot2</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+
+        <argLine>-Dfile.encoding=UTF-8</argLine>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <spring.version>5.0.4.RELEASE</spring.version>
+        <spring.boot.version>2.0.0.RELEASE</spring.boot.version>
+        <spring.data.version>Kay-RELEASE</spring.data.version>
+        <spring.session.version>2.0.0.RELEASE</spring.session.version>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.servicecomb</groupId>
+                <artifactId>java-chassis-dependencies</artifactId>
+                <version>1.1.0</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-releasetrain</artifactId>
+                <version>${spring.data.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.servicecomb</groupId>
+                <artifactId>java-chassis-dependencies</artifactId>
+                <version>1.1.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.servicecomb</groupId>
+                <artifactId>spring-boot2-starter</artifactId>
+                <version>1.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicecomb</groupId>
+                <artifactId>spring-boot2-starter-servlet</artifactId>
+                <version>1.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicecomb</groupId>
+                <artifactId>spring-boot2-starter-standalone</artifactId>
+                <version>1.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicecomb</groupId>
+                <artifactId>spring-boot2-starter-discovery</artifactId>
+                <version>1.1.0</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Fixed the m2e warning of remote resources plugin -->
+                <plugin>
+                    <!--<groupId>org.eclipse.m2e</groupId>-->
+                    <!--<artifactId>lifecycle-mapping</artifactId>-->
+                    <!--<version>1.0.0</version>-->
+                    <!--<configuration>-->
+                        <!--<lifecycleMappingMetadata>-->
+                            <!--<pluginExecutions>-->
+                                <!--<pluginExecution>-->
+                                    <!--<pluginExecutionFilter>-->
+                                        <!--<groupId>org.apache.maven.plugins</groupId>-->
+                                        <!--<artifactId>maven-remote-resources-plugin</artifactId>-->
+                                        <!--<versionRange>[1.0,)</versionRange>-->
+                                        <!--<goals>-->
+                                            <!--<goal>process</goal>-->
+                                        <!--</goals>-->
+                                    <!--</pluginExecutionFilter>-->
+                                    <!--<action>-->
+                                        <!--<ignore>-->
+                                        <!--</ignore>-->
+                                    <!--</action>-->
+                                <!--</pluginExecution>-->
+                            <!--</pluginExecutions>-->
+                        <!--</lifecycleMappingMetadata>-->
+                    <!--</configuration>-->
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

@@ -16,6 +16,10 @@
     <main.class>com.huawei.cse.porter.user.UserMain</main.class>
   </properties>
 
+
+  <dependencyManagement>
+
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>com.huawei.cse.porter</groupId>
